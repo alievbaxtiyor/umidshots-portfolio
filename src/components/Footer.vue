@@ -37,6 +37,21 @@
               <li><a href="#">{{ translations.footer.social.twitter }}</a></li>
             </ul>
           </div>
+
+          <div class="footer-column footer-map">
+            <h4>{{ translations.contact.location }}</h4>
+            <div class="map-container">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1498.7264996316537!2d69.2714889!3d41.2990079!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ae8bdc89f27f6b%3A0x49989a739be2f0e5!2sDmaar%20plaza!5e0!3m2!1sen!2sus!4v1764053223084!5m2!1sen!2sus"
+                width="100%"
+                height="200"
+                style="border:0; border-radius: 8px;"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -108,7 +123,7 @@ export default {
 
 .footer-links {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 2rem;
 }
 
@@ -157,6 +172,22 @@ export default {
   font-weight: 500;
 }
 
+.footer-map {
+  grid-column: span 1;
+}
+
+.map-container {
+  margin-top: 0.5rem;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.map-container iframe {
+  display: block;
+  width: 100%;
+}
+
 /* Responsive */
 @media (max-width: 1024px) {
   .footer-content {
@@ -187,6 +218,10 @@ export default {
   .footer-links {
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
+  }
+
+  .footer-map {
+    grid-column: span 2;
   }
 
   .footer-bottom {
