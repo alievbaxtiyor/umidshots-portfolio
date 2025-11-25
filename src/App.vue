@@ -39,7 +39,7 @@ export default {
   data() {
     return {
       isDarkMode: true, // Dark mode is enabled by default
-      currentLang: 'en' // Default language is English
+      currentLang: 'uz' // Default language is Uzbek
     }
   },
   computed: {
